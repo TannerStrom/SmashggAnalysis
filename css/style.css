@@ -1,3 +1,11 @@
 .tournament-name {
   text-align: center;
 }
+.tournament-header {
+  background-color: aqua;
+  height:50px;
+}
+
+.entrant-names {
+  
+}
