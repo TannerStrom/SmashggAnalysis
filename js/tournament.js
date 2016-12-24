@@ -41,4 +41,5 @@ function getPlayer(data) {
 
 function gotPlayer(data) {
   console.log(data);
+  console.log("wow");
 }
