@@ -18,14 +18,18 @@ function setTitle(data) {
 }
 
 function getEntrantID(data) {
-  var entrants = data['entities']['entrants'];
+  var len = data['entities']['entrants']['length'];
+  var i;
   
-  $.ajax({
-    url: 'https://api.smash.gg/entrant/326304',
-    type: 'GET',
-    dataType: 'json',
-    success: getPlayer
-  })
+  for(i = 0; i < len; i++) {
+    var entrantId = data['entities']['entrants'][i]['id'];
+    $.ajax({
+      url: 'https://api.smash.gg/entrant/' + entrantId,
+      type: 'GET',
+      dataType: 'json',
+      success: getPlayer
+    })
+  }
 }
 
 function getPlayer(data) {
@@ -40,6 +44,5 @@ function getPlayer(data) {
 }
 
 function gotPlayer(data) {
-  console.log(data);
-  console.log("wow");
+  console.log(data['entities']['player']['gamerTag']);
 }

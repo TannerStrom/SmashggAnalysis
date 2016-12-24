@@ -1,0 +1,10 @@
+https://api.smash.gg/event/(id) - Gets the ID of the player's entry to a specific tournaments
+  Contains:
+    actionRecords: ???
+    entities:
+      entrants: All entrants to event
+        - id: Player ID, leads to entire profile
+        - name: Their current tag with prefix
+      event: Query about the event (Melee singles, etc)
+      groups: The pools
+      
